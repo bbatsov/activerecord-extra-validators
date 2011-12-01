@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "activerecord-extra-validators"
   gem.homepage = "http://github.com/bbatsov/activerecord-extra-validators"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Collection of additional validators for ActiveRecord.}
+  gem.description = %Q{Contains all kinds of validators that are missing by default.}
   gem.email = "bozhidar@empowerunited.com"
   gem.authors = ["Bozhidar Batsov"]
   # dependencies defined in Gemfile
