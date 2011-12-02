@@ -1,3 +1,5 @@
+require 'client_side_validations'
 require 'validators/email_format_validator'
 require 'validators/url_format_validator'
-
+require 'validators/name_format_validator'
+require 'validators/boolean_validator'
