@@ -12,6 +12,11 @@ group :development do
   gem "rcov", ">= 0"
 end
 
-gem 'rspec-rails'
+group :test do
+  gem 'rspec-rails'
+  gem 'sqlite3'
+end
+
+gem 'client_side_validations'
 gem 'activerecord'
 
