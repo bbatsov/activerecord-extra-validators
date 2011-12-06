@@ -1,6 +1,6 @@
 class NameFormatValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    record.errors[attribute] << (options[:message] || 'is not a valid name') unless NameFormatValidator.valid_name?(value)
+    record.errors[attribute] << (options[:message] || 'is not a valid name') unless value.blank? || NameFormatValidator.valid_name?(value)
   end
 
   def self.valid_name?(value)

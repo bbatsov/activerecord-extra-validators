@@ -17,8 +17,38 @@ describe NameFormatValidator do
     user.should_not be_valid
   end
 
-  it 'accepts valid name format' do
+  it 'accepts names consisting of one word' do
+    user.name = 'bill'
+
+    user.should be_valid
+  end
+
+  it 'accepts more than one words separated with space' do
     user.name = 'Homer Simpson'
+
+    user.should be_valid
+  end
+
+  it 'accepts more than one words separated with dash' do
+    user.name = 'Mary-Jane'
+
+    user.should be_valid
+  end
+
+  it 'does not accept names not starting with a letter' do
+    user.name = '-Bill'
+
+    user.should_not be_valid
+  end
+
+  it 'does not validate empty values' do
+    user.name = ''
+
+    user.should be_valid
+  end
+
+  it 'does not validate nil values' do
+    user.name = nil
 
     user.should be_valid
   end

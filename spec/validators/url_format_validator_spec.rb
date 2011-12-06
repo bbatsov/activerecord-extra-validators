@@ -26,4 +26,16 @@ describe UrlFormatValidator do
 
     user.should be_valid
   end
+
+  it 'does not validate empty values' do
+    user.url = ''
+
+    user.should be_valid
+  end
+
+  it 'does not validate nil values' do
+    user.url = nil
+
+    user.should be_valid
+  end
 end
