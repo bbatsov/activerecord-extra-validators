@@ -1,6 +1,6 @@
 class UrlFormatValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
-    record.errors[attribute] << (options[:message] || 'is not a valid url') unless UrlFormatValidator.valid_url?(value)
+    record.errors[attribute] << (options[:message] || 'is not a valid url') unless value.blank? || UrlFormatValidator.valid_url?(value)
   end
 
   def self.valid_url?(value)

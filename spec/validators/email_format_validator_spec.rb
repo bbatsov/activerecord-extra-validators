@@ -22,4 +22,16 @@ describe EmailFormatValidator do
 
     user.should be_valid
   end
+
+  it 'does not validate empty values' do
+    user.email = ''
+
+    user.should be_valid
+  end
+
+  it 'does not validate nil values' do
+    user.email = nil
+
+    user.should be_valid
+  end
 end
