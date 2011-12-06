@@ -52,4 +52,16 @@ describe NameFormatValidator do
 
     user.should be_valid
   end
+
+  it 'accepts apostrophes in the names' do
+    user.name = "O'Connell"
+
+    user.should be_valid
+  end
+
+  it 'accepts dots in the names' do
+    user.name = 'John Jr.'
+
+    user.should be_valid
+  end
 end

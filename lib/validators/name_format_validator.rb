@@ -4,7 +4,7 @@ class NameFormatValidator < ActiveModel::EachValidator
   end
 
   def self.valid_name?(value)
-    value =~ /^[\p{Alpha}][\p{Alpha}\s-]*$/i
+    value =~ /^[\p{Alpha}][\p{Alpha}\.\'\s-]*$/i
   end
 end
 
