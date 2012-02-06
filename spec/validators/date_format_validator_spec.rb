@@ -3,7 +3,7 @@ require 'spec_helper'
 describe DateFormatValidator do
   before(:all) do
     class UserWithDate < ActiveRecord::Base
-      set_table_name 'mocked_users'
+      self.table_name = 'mocked_users'
 
       validates :birth_date, date_format: true
     end

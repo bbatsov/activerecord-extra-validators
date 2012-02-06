@@ -3,7 +3,7 @@ require 'spec_helper'
 describe NameFormatValidator do
   before(:all) do
     class UserWithName < ActiveRecord::Base
-      set_table_name 'mocked_users'
+      self.table_name = 'mocked_users'
 
       validates :name, name_format: true
     end

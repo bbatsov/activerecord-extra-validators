@@ -3,7 +3,7 @@ require 'spec_helper'
 describe UrlFormatValidator do
   before(:all) do
     class UserWithUrl < ActiveRecord::Base
-      set_table_name 'mocked_users'
+      self.table_name = 'mocked_users'
 
       validates :url, url_format: true
     end

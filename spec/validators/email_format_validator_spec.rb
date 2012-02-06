@@ -3,7 +3,7 @@ require 'spec_helper'
 describe EmailFormatValidator do
   before(:all) do
     class UserWithEmail < ActiveRecord::Base
-      set_table_name 'mocked_users'
+      self.table_name = 'mocked_users'
 
       validates :email, email_format: true
     end
