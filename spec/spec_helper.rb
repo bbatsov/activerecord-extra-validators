@@ -12,6 +12,7 @@ ActiveRecord::Migration.verbose = false
 ActiveRecord::Schema.define(:version => 1) do
   create_table :mocked_users, :force => true do |t|
     t.string :name
+    t.string :birth_date
     t.string :email
     t.string :url
     t.string :active
