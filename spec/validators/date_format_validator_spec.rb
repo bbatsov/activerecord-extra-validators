@@ -11,10 +11,6 @@ describe DateFormatValidator do
 
   let(:user) { UserWithDate.new }
 
-  before(:each) do
-    user.validates_with DateFormatValidator, :attributes => :birth_date
-  end
-
   it 'does not accept invalid date format' do
     user.birth_date = 'invalid'
 
