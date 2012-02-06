@@ -3,7 +3,7 @@ require 'spec_helper'
 describe BooleanValidator do
   before(:all) do
     class UserWithBoolean < ActiveRecord::Base
-      set_table_name 'mocked_users'
+      self.table_name = 'mocked_users'
 
       validates :active, boolean: true
     end
