@@ -4,7 +4,7 @@ class UrlFormatValidator < ActiveModel::EachValidator
   end
 
   def self.valid_url?(value)
-    value =~ /^(?:https?:\/\/)?[a-z.0-9]+\.[a-z.]{2,}/i
+    value =~ /^((?:https?|ftp):\/\/)?(?:[^:]*:[^@]*@)?(?:(?:[^\s\.:@%#\?]+\.)+[a-z]{2,}|(?:(?:25[0-5]|2[0-4]\d|[01]?\d{1,2})\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d{1,2}))(?:\/|$)/i
   end
 end
 
